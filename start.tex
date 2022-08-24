@@ -1,0 +1,66 @@
+\documentclass[FSZ,a4paper,onesided]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{verbose,\ORT,a4paper,tmargin=1.0cm,bmargin=.5cm,lmargin=.5cm,rmargin=.5cm, headsep=.5cm}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=1mm,
+  belowskip=1mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=false,
+  tabsize=1
+}
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\pagestyle{fancy}
+\lhead{\large{\textbf{\TEAM}, \textbf{\UNI}}}
+\rhead{\thepage}
+
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titlespacing*{\section}
+{0pt}{0ex}{0ex}
+\titlespacing*{\subsection}
+{0pt}{0ex}{0ex}
+\titlespacing*{\subsubsection}
+{0pt}{0ex}{0ex}
+\setlength{\columnsep}{0.05in}
+\setlength{\columnseprule}{1px}
+
+
+\begin{document}
+
+\begin{multicols*}{\COLS}
+\pagenumbering{gobble}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\lstloadlanguages{C++,Java}
+\input{Extra/build-file}
+
