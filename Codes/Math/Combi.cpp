@@ -1,22 +1,27 @@
-const int N = 2e5 + 5;
-const int mod = 1e9 + 7;
+#include<bits/stdc++.h>
+using namespace std;
 
-array < int, N + 1 > fact, inv, inv_fact, Drng;
-void init() {
-    fact[0] = inv_fact[0] = 1;
-    for (int i = 1; i <= N; i++) {
-        inv[i] = i == 1 ? 1 : (LL) inv[i - mod % i] * (mod / i + 1) % mod;
-        fact[i] = (LL) fact[i - 1] * i % mod;
-        inv_fact[i] = (LL) inv_fact[i - 1] * inv[i] % mod;
-    }
-    Drng[0] = 1, Drng[1] = 0;
-    for(int i = 2; i <= N; i++)
-        Drng[i] = (LL) (i - 1) * (Drng[i - 1] + Drng[i - 2]) % mod;
+const int M = 1e9+7;
+
+int power(int a, int p) {
+    if (p == 0) return 1;
+    int ans = power(a, p/2);
+    ans = (1LL*ans * ans)%M;
+    if (p%2)    ans = (1LL*ans*a)%M;
+    return ans;
 }
+
+const int N = 2e5+7;
+int fac[N], invfac[N];
+void pre() {
+    fac[0] = 1;
+    for(int i=1; i<N; i++)  fac[i] = (1LL*i*fac[i-1])%M;
+    invfac[N-1] = power(fac[N-1], M-2);
+    for (int i=N-2; i>=0; i--)  invfac[i] = (1LL*invfac[i+1]*(i+1))%M;
+}
+
 int C(int n, int r) {
-    if (fact[0] != 1) init();
-    return (r < 0 or r > n) ? 0 : (LL) fact[n] * inv_fact[r] % mod * inv_fact[n - r] % mod;
-}
-int D(int n) { 
-    return n < 0 ? 0 : Drng[n];
+    if (r<0 || r>n) return 0;
+    int denom = (1LL*invfac[r]*invfac[n-r])%M;
+    return (1LL*fac[n]*denom)%M;
 }
