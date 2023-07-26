@@ -1,0 +1,69 @@
+\subsection*{Sublime Build}
+\begin{lstlisting}[language= Pascal, commentstyle=\color{black}, numberstyle=\tiny\color{black}, keywordstyle=\color{black}, stringstyle=\color{black},
+]
+{
+    "cmd" : ["g++ -std=c++14 -DSONIC $file_name -o $file_base_name && timeout 4s ./$file_base_name<inputf.in>outputf.in"], 
+    "selector" : "source.cpp",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "shell": true,
+    "working_dir" : "$file_path"
+}
+\end{lstlisting}
+\subsection*{vimrc}
+
+\begin{lstlisting}[language= Pascal, commentstyle=\color{black}, numberstyle=\tiny\color{black}, keywordstyle=\color{black}, stringstyle=\color{black},
+]
+set mouse=a
+  set termguicolors
+  filetype plugin indent on
+  syntax on
+
+" Some useful settings
+  set smartindent expandtab ignorecase smartcase incsearch relativenumber nowrap autoread splitright splitbelow
+  set tabstop=4         "the width of a tab
+  set shiftwidth=4      "the width for indent
+  colorscheme torte
+
+"auto pair curlybraces
+  inoremap {<ENTER> {}<LEFT><CR><ESC><S-o>
+
+" mapping jj to esc
+  inoremap jj <ESC>  
+
+  "compile and run using file input put  
+  autocmd filetype cpp map <F5> :wa<CR>:!clear && g++ % -D LOCAL -std=c++17 -Wall -Wextra -Wconversion -Wshadow -Wfloat-equal -o  ~/Codes/prog && (timeout 5 ~/Codes/prog < ~/Codes/in) >  ~/Codes/out<CR>
+  "copy to input file
+  map <F4> :!xclip -o -sel clip > ~/Codes/in <CR><CR>
+  map <F6> :vsplit ~/Codes/in<CR>:split ~/Codes/out<CR><C-w>=20<C-w><<C-w><C-h>
+
+ " Leader key
+  let mapleader=',,'
+
+ " Copy template
+  noremap <Leader>t :!cp ~/Codes/temp.cpp %<CR><CR>
+  :autocmd BufNewFile *.cpp 0r ~/Codes/temp.cpp
+
+  "note if vim-features +clipboard is not found, it will not work
+  "for fast check :echo has('clipboard) = 0 if clipboard features not present,
+  "need vim-gtk / vim-gtk3 package for this
+  set clipboard=unnamedplus
+\end{lstlisting}
+
+\subsection*{Stress-tester}
+\begin{lstlisting}[language= Pascal, commentstyle=\color{black}, numberstyle=\tiny\color{black}, keywordstyle=\color{black}, stringstyle=\color{black},
+]
+#!/bin/bash
+# Call as stresstester GENERATOR SOL1 SOL2 ITERATIONS [--count]
+for i in $(seq 1 "$4") ; do
+    [[ $* == *--count* ]] && echo "Attempt $i/$4"
+    $1 > in.txt
+    $2 < in.txt > out1.txt
+    $3 < in.txt > out2.txt
+    diff -y out1.txt out2.txt > diff.txt
+    if [ $? -ne 0 ] ; then
+        echo "Differing Testcase Found:"; cat in.txt
+        echo -e "\nOutputs:"; cat diff.txt
+        break
+    fi
+done
+\end{lstlisting}
