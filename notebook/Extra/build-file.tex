@@ -53,12 +53,17 @@ set mouse=a
 \begin{lstlisting}[language= Pascal, commentstyle=\color{black}, numberstyle=\tiny\color{black}, keywordstyle=\color{black}, stringstyle=\color{black},
 ]
 #!/bin/bash
-# Call as stresstester GENERATOR SOL1 SOL2 ITERATIONS [--count]
-for i in $(seq 1 "$4") ; do
-    [[ $* == *--count* ]] && echo "Attempt $i/$4"
-    $1 > in.txt
-    $2 < in.txt > out1.txt
-    $3 < in.txt > out2.txt
+# Call as stresstester ITERATIONS [--count]
+
+g++ gen.cpp -o gen
+g++ sol.cpp -o sol
+g++ brute.cpp -o brute
+
+for i in $(seq 1 "$1") ; do
+    echo "Attempt $i/$1"
+    ./gen > in.txt
+    ./sol < in.txt > out1.txt
+    ./brute < in.txt > out2.txt
     diff -y out1.txt out2.txt > diff.txt
     if [ $? -ne 0 ] ; then
         echo "Differing Testcase Found:"; cat in.txt

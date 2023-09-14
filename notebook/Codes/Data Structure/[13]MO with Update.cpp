@@ -43,30 +43,6 @@ int mex() {
   assert(0);
 }
 int main() {
-  int n, q;
-  cin >> n >> q;
-  int counter = 0;
-  map<int, int> M;
-  for (int i = 1; i <= n; i++) {
-    cin >> arr[i];
-    if (!M[arr[i]]) M[arr[i]] = ++counter;
-    arr[i] = M[arr[i]];
-  }
-  iota(id, id + N, 0);
-  while (q--) {
-    int tp, x, y;
-    cin >> tp >> x >> y;
-    if (tp == 1)
-      Q[++qi] = query(x, y, ui);
-    else {
-      if (!M[y]) M[y] = ++counter;
-      y = M[y];
-      Up[++ui] = {x, y, arr[x]};
-      arr[x] = y;
-    }
-  }
-  t = ui;
-  cnt[0] = 3 * n;
   sort(id + 1, id + qi + 1, [&](int x, int y) { return Q[x] < Q[y]; });
   for (int i = 1; i <= qi; i++) {
     int x = id[i];
@@ -78,5 +54,4 @@ int main() {
     while (Q[x].r < r) remove(r--);
     ans[x] = mex();
   }
-  for (int i = 1; i <= qi; i++) cout << ans[i] << '\n';
 }
