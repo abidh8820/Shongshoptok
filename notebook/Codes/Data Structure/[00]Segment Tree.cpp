@@ -4,56 +4,61 @@ using DT = LL;
 using LT = LL;
 constexpr DT I = 0;
 constexpr LT None = 0;
-DT val[4 * N];
-LT lazy[4 * N];
-int L, R;
 
-void pull(int s, int e, int node) {
-  val[node] = val[node << 1] + val[node << 1 | 1];
+DT val[4 * N];
+LT lz[4 * N];
+int L, R;
+/*****************************************/
+void apply(const LT &up, int l, int r, int u) {
+  val[u] += (r - l + 1) * up;
+  lz[u] += up;
 }
-void apply(const LT &U, int s, int e, int node) {
-  val[node] += (e - s + 1) * U;
-  lazy[node] += U;
+void reset(int u) { lz[u] = None; }
+void pull(int l, int r, int u) {
+  val[u] = val[u << 1] + val[u << 1 | 1];
 }
-void reset(int node) { lazy[node] = None; }
 DT merge(const DT &a, const DT &b) { return a + b; }
-DT get(int s, int e, int node) { return val[node]; }
-void push(int s, int e, int node) {
-  if (s == e) return;
-  apply(lazy[node], s, s + e >> 1, node << 1);
-  apply(lazy[node], s + e + 2 >> 1, e, node << 1 | 1);
-  reset(node);
+DT get(int l, int r, int u) { return val[u]; }
+/*****************************************/
+
+void push(int l, int r, int u) {
+  if (l == r) return;
+  int m = l + r >> 1, lft = u << 1, ryt = lft | 1;
+  apply(lz[u], l, m, lft);
+  apply(lz[u], m + 1, r, ryt);
+  reset(u);
 }
-void build(int s, int e, vector<DT> &v, int node = 1) {
-  int m = s + e >> 1;
-  if (s == e) {
-    val[node] = v[s];
+void build(int l, int r, vector<DT> &v, int u = 1) {
+  reset(u);
+  if (l == r) {
+    val[u] = v[l];
     return;
   }
-  build(s, m, v, node * 2);
-  build(m + 1, e, v, node * 2 + 1);
-  pull(s, e, node);
+  int m = l + r >> 1, lft = u << 1, ryt = lft | 1;
+  build(l, m, v, lft);
+  build(m + 1, r, v, ryt);
+  pull(l, r, u);
 }
-void update(int S, int E, LT uval, int s = L, int e = R, int node = 1) {
-  if (S > E) return;
-  if (S == s and E == e) {
-    apply(uval, s, e, node);
+void update(int ql, int qr, LT up, int l = L, int r = R, int u = 1) {
+  if (ql > r or l > qr) return;
+  if (ql <= l and r <= qr) {
+    apply(up, l, r, u);
     return;
   }
-  push(s, e, node);
-  int m = s + e >> 1;
-  update(S, min(m, E), uval, s, m, node * 2);
-  update(max(S, m + 1), E, uval, m + 1, e, node * 2 + 1);
-  pull(s, e, node);
+  push(l, r, u);
+  int m = l + r >> 1, lft = u << 1, ryt = lft | 1;
+  update(ql, qr, up, l, m, lft);
+  update(ql, qr, up, m + 1, r, ryt);
+  pull(l, r, u);
 }
-DT query(int S, int E, int s = L, int e = R, int node = 1) {
-  if (S > E) return I;
-  if (s == S and e == E) return get(s, e, node);
-  push(s, e, node);
-  int m = s + e >> 1;
-  DT L = query(S, min(m, E), s, m, node * 2);
-  DT R = query(max(S, m + 1), E, m + 1, e, node * 2 + 1);
-  return merge(L, R);
+DT query(int ql, int qr, int l = L, int r = R, int u = 1) {
+  if (ql > r or l > qr) return I;
+  if (ql <= l and r <= qr) return get(l, r, u);
+  push(l, r, u);
+  int m = l + r >> 1, lft = u << 1, ryt = lft | 1;
+  DT ret1 = query(ql, qr, l, m, lft);
+  DT ret2 = query(ql, qr, m + 1, r, ryt);
+  return merge(ret1, ret2);
 }
 void init(int _L, int _R, vector<DT> &v) {
   L = _L, R = _R;
