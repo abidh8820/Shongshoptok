@@ -11,6 +11,7 @@ using namespace __gnu_pbds;
     //order_of_key(val) --> returns the number of items in a set that are strictly smaller than our item
 template <typename DT> 
 using ordered_set = tree <DT, null_type, less<DT>, rb_tree_tag,tree_order_statistics_node_update>;
+mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 
 /*--- DEBUG TEMPLATE STARTS HERE ---*/
 #ifdef SFT
