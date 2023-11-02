@@ -1,20 +1,4 @@
-//#pragma GCC optimize("Ofast")
-//#pragma GCC optimization ("O3")
-//#pragma comment(linker, "/stack:200000000")
-//#pragma GCC optimize("unroll-loops")
-//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
-
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-    //find_by_order(k) --> returns iterator to the kth largest element counting from 0
-    //order_of_key(val) --> returns the number of items in a set that are strictly smaller than our item
-template <typename DT> 
-using ordered_set = tree <DT, null_type, less<DT>, rb_tree_tag,tree_order_statistics_node_update>;
-mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
-
 /*--- DEBUG TEMPLATE STARTS HERE ---*/
-#ifdef SFT
 void show(int x) {cerr << x;}
 void show(long long x) {cerr << x;}
 void show(double x) {cerr << x;}
@@ -28,7 +12,8 @@ template<typename T>
 void show(T x) {int f = 0; cerr << "{"; for (auto &i: x) cerr << (f++ ? ", " : ""), show(i); cerr << "}";}
 
 void debug_out(string s) {
-    cerr << '\n';
+    s.clear();
+    cerr << s << '\n';
 }
 template <typename T, typename... V>
 void debug_out(string s, T t, V... v) {
@@ -41,11 +26,31 @@ void debug_out(string s, T t, V... v) {
     cerr << endl;
     if(sizeof...(v)) debug_out(s, v...);
 }
+#define dbg(x...) cerr << "LINE: " << __LINE__ << endl; debug_out(#x, x); cerr << endl; 
+/*--- DEBUG TEMPLATE ENDS HERE ---*/
+//#pragma GCC optimize("Ofast")
+//#pragma GCC optimization ("O3")
+//#pragma comment(linker, "/stack:200000000")
+//#pragma GCC optimize("unroll-loops")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 
-#define debug(x...) cerr << "LINE: " << __LINE__ << endl; debug_out(#x, x); cerr << endl;
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace std;
+using namespace __gnu_pbds;
+    //find_by_order(k) --> returns iterator to the kth largest element counting from 0
+    //order_of_key(val) --> returns the number of items in a set that are strictly smaller than our item
+template <typename DT> 
+using ordered_set = tree <DT, null_type, less<DT>, rb_tree_tag,tree_order_statistics_node_update>;
+mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
+
+#ifdef LOCAL
+#include "dbg.h"
 #else
-#define debug(x...)
+#define dbg(x...)
 #endif
 
-
-
+int main() {
+    cin.tie(0) -> sync_with_stdio(0);
+}
