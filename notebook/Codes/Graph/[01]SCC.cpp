@@ -1,30 +1,68 @@
-typedef long long LL;
-const LL N = 1e6 + 7;
+vector<int> order, comp, idx;
+vector<bool> vis;
+vector<vector<int>> comps;
+Graph dag;
 
-bool vis[N];
-vector<int> adj[N], adjr[N];
-vector<int> order, component;
-// tp = 0 ,finding topo order, tp = 1 , reverse edge traversal
-
-void dfs(int u, int tp = 0) {
-  vis[u] = true;
-  if (tp) component.push_back(u);
-  auto& ad = (tp ? adjr : adj);
-  for (int v : ad[u])
-    if (!vis[v]) dfs(v, tp);
-  if (!tp) order.push_back(u);
-}
-int main() {
-  for (int i = 1; i <= n; i++) {
-    if (!vis[i]) dfs(i);
+void dfs1(int u, Graph &G, string s = "") {
+  vis[u] = 1;
+  for (int e : G[u]) {
+    int v = G(e).to(u);
+    if (!vis[v]) dfs1(v, G, s);
   }
-  memset(vis, 0, sizeof vis);
+  order.push_back(u);
+}
+void dfs2(int u, Graph &R) {
+  comp.push_back(u);
+  idx[u] = comps.size();
+
+  for (int e : R[u]) {
+    int v = R(e).to(u);
+    if (idx[v] == -1) dfs2(v, R);
+  }
+}
+
+void init(Graph &G) {
+  int n = G.n;
+  vis.assign(n, 0);
+  idx.assign(n, -1);
+
+  for (int i = 0; i < n; i++) {
+    if (!vis[i]) dfs1(i, G);
+  }
   reverse(order.begin(), order.end());
-  for (int i : order) {
-    if (!vis[i]) {
-      // one component is found
-      dfs(i, 1), component.clear();
-    }
+
+  Graph R(n);
+  for (auto &e : G.edges) R.addEdge(e.v, e.u, 0);
+
+  for (int u : order) {
+    if (idx[u] != -1) continue;
+    comp.clear();
+    dfs2(u, R);
+    comps.push_back(comp);
   }
 }
 
+Graph &createDAG(Graph &G) {
+  int sz = comps.size();
+  dag = Graph(sz);
+
+  vector<bool> taken(sz);
+  vector<int> cur;
+
+  for (int i = 0; i < sz; i++) {
+    cur.clear();
+    taken[i] = 1;
+    for (int u : comps[i]) {
+      for (int e : G[u]) {
+        int v = G(e).to(u);
+        int j = idx[v];
+        if (taken[j]) continue;  // rejects multi-edge
+        dag.addEdge(i, j, 0);
+        taken[j] = 1;
+        cur.push_back(j);
+      }
+    }
+    for (int j : cur) taken[j] = 0;
+  }
+  return dag;
+}
