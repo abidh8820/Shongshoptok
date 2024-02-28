@@ -1,12 +1,41 @@
 #!/usr/bin/env python
 import os
+from math import gcd
 Base = './Codes/'
+
+def convert(filename):
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+
+    leading_spaces_counts = [len(line) - len(line.lstrip(' ')) for line in lines if line.strip()]
+    if not leading_spaces_counts: indentation_length = 1
+    else: indentation_length = gcd(*leading_spaces_counts)
+
+    # Check if there are leading spaces in the first non-empty line
+    newlines = []
+    for line in lines:
+        leading_spaces = len(line) - len(line.lstrip(' '))
+        # Replace leading spaces with tabs (assuming 4 spaces per tab)
+        tabs_count = leading_spaces // indentation_length
+        tabs = '\t' * tabs_count
+        new_line = tabs + line.lstrip(' ')
+
+
+        leading_tabs = len(new_line) - len(new_line.lstrip('\t'))
+        new_line = '  ' * leading_tabs + new_line.lstrip('\t')
+
+        newlines.append(new_line)
+
+    # Write the modified content back to the file
+    return newlines
+
+
 def ProcessFile(f, name, W):
     if f.endswith((".txt", ".cpp")):
+        lines = convert(f)
         W.write("\\begin{lstlisting}\n")
-        with open(f) as CPP:
-            for lines in CPP:
-                W.write(lines)
+        for line in lines:
+            W.write(line)
         W.write("\\end{lstlisting}\n")
 
 

@@ -1,7 +1,6 @@
 #!/bin/sh
-python script.py
-pdflatex out.tex
-pdflatex out.tex
+python3 script.py
+lualatex out.tex
+lualatex out.tex
 cp out.pdf team-notebook.pdf 
-rm out*
 zathura team-notebook.pdf
