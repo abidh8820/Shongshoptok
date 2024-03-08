@@ -1,51 +1,46 @@
-struct line {
-  ll m, c;
-  line() {}
-  line(ll m, ll c) : m(m), c(c) {}
-};
-struct convex_hull_trick {
-  vector<line> lines;
+#include <bits/stdc++.h>
+using namespace std;
+
+using LL = long long;
+
+const int N = 3e5 + 9;
+const int M = 1e9 + 7;
+
+struct CHT {
+  vector<LL> m, b;
   int ptr = 0;
-  convex_hull_trick() {}
-  bool bad(line a, line b, line c) {
-    return 1.0 * (c.c - a.c) * (a.m - b.m) < 1.0 * (b.c - a.c) * (a.m - c.m);
+
+  bool bad(int l1, int l2, int l3) {
+    return 1.0 * (b[l3] - b[l1]) * (m[l1] - m[l2]) <= 1.0 * (b[l2] - b[l1]) * (m[l1] - m[l3]);  //(slope dec+query min),(slope inc+query max)
+    return 1.0 * (b[l3] - b[l1]) * (m[l1] - m[l2]) > 1.0 * (b[l2] - b[l1]) * (m[l1] - m[l3]);  //(slope dec+query max), (slope inc+query min)
   }
-  void add(line L) {
-    int sz = lines.size();
-    while (sz >= 2 && bad(lines[sz - 2], lines[sz - 1], L)) {
-      lines.pop_back();
-      sz--;
+
+  void add(LL _m, LL _b) {
+    m.push_back(_m);
+    b.push_back(_b);
+    int s = m.size();
+    while (s >= 3 && bad(s - 3, s - 2, s - 1)) {
+      s--;
+      m.erase(m.end() - 2);
+      b.erase(b.end() - 2);
     }
-    lines.pb(L);
   }
-  ll get(int idx, int x) { return (1ll * lines[idx].m * x + lines[idx].c); }
-  ll query(int x) {
-    if (lines.empty()) return 0;
-    if (ptr >= lines.size()) ptr = lines.size() - 1;
-    while (ptr < lines.size() - 1 && get(ptr, x) > get(ptr + 1, x)) ptr++;
-    return get(ptr, x);
+
+  LL f(int i, LL x) { return m[i] * x + b[i]; }
+
+  //(slope dec+query min), (slope inc+query max) -> x increasing
+  //(slope dec+query max), (slope inc+query min) -> x decreasing
+ 
+  LL query(LL x) {
+    if (ptr >= m.size()) ptr = m.size() - 1;
+    while (ptr < m.size() - 1 && f(ptr + 1, x) < f(ptr, x)) ptr++;
+    return f(ptr, x);
+  }
+
+  LL bs(int l, int r, LL x) {
+    int mid = (l + r) / 2;
+    if (mid + 1 < m.size() && f(mid + 1, x) < f(mid, x)) return bs(mid + 1, r, x);  // > for max
+    if (mid - 1 >= 0 && f(mid - 1, x) < f(mid, x)) return bs(l, mid - 1, x);  // > for max
+    return f(mid, x);
   }
 };
-ll sum[MAX];
-ll dp[MAX];
-int arr[MAX];
-int main() {
-  fastio;
-  int t;
-  cin >> t;
-  while (t--) {
-    int n, a, b, c;
-    cin >> n >> a >> b >> c;
-    for (int i = 1; i <= n; i++) cin >> sum[i];
-    for (int i = 1; i <= n; i++) dp[i] = 0, sum[i] += sum[i - 1];
-    convex_hull_trick cht;
-    cht.add(line(0, 0));
-    for (int pos = 1; pos <= n; pos++) {
-      dp[pos] = cht.query(sum[pos]) - 1ll * a * sqr(sum[pos]) - c;
-      cht.add(line(2ll * a * sum[pos], dp[pos] - a * sqr(sum[pos])));
-    }
-    ll ans = (-1ll * dp[n]);
-    ans += (1ll * sum[n] * b);
-    cout << ans << "\n";
-  }
-}
