@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.1.1)  8 MAR 2024 16:30
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.20)  25 APR 2024 08:18
  restricted system commands enabled.
 **out.tex
 (./out.tex
@@ -687,60 +687,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
 [8]
-Overfull \hbox (22.21336pt too wide) in paragraph at lines 1244--1245
-[][][][][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (37.48837pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (18.58841pt too wide) in paragraph at lines 1244--1245
-[][] 
- []
-
-
-Overfull \hbox (13.86342pt too wide) in paragraph at lines 1244--1245
-[]  
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -866,16 +812,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
-[22]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.0pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.0pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
-
-[23] (./Extra/math.tex
+[22] (./Extra/math.tex
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
@@ -914,20 +851,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
-[24]) (./out.aux)
+[23]) (./out.aux)
 Package rerunfilecheck Info: File `out.out' has not changed.
-(rerunfilecheck)             Checksum: 8374C14D4C4C285D4CAA4F89AB2386AB;8313.
+(rerunfilecheck)             Checksum: 332E2254B2DB5338AF19F2DCB609B8A3;8313.
 )
 
 Here is how much of LuaTeX's memory you used:
- 18242 strings out of 477805
- 1819575,794899 words of node,token memory allocated
+ 18131 strings out of 477805
+ 1819371,794899 words of node,token memory allocated
  586 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 26 attribute, 59 glue_spec, 26 attr
 ibute_list, 1 write nodes
-   avail lists: 1:2,2:21379,3:1028,4:2649,5:45261,6:320,7:71408,8:305,9:91051,10
-:46,11:4768
- 35226 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:22401,3:1030,4:2494,5:47343,6:322,7:70782,8:307,9:95153,10
+:46,11:5008
+ 35222 multiletter control sequences out of 65536+600000
  35 fonts using 1459567 bytes
  60i,12n,65p,557b,1279s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
@@ -944,10 +881,10 @@ hare/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on out.pdf (25 pages, 424133 bytes).
+Output written on out.pdf (24 pages, 418150 bytes).
 
-PDF statistics: 3678 PDF objects out of 4296 (max. 8388607)
- 3600 compressed objects within 36 object streams
- 3124 named destinations out of 3580 (max. 131072)
+PDF statistics: 3563 PDF objects out of 3580 (max. 8388607)
+ 3487 compressed objects within 35 object streams
+ 3017 named destinations out of 3580 (max. 131072)
  529 words of extra memory for PDF output out of 10000 (max. 100000000)
 

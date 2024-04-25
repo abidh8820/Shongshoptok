@@ -23,45 +23,45 @@
 \contentsline {section}{\numberline {4}Geometry}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Point}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Linear}{8}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Circular}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Convex}{10}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Polygon}{12}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Half Plane}{13}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Graph}{13}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Graph Template}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Lifting, LCA, HLD}{13}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}SCC}{14}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Centroid Decompose}{14}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Euler Tour on Edge}{15}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Virtual Tree}{15}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Dinic Max Flow}{16}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Min Cost Max Flow}{16}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}Block Cut Tree}{17}{subsection.5.9}%
-\contentsline {subsection}{\numberline {5.10}Bridge Tree}{17}{subsection.5.10}%
-\contentsline {subsection}{\numberline {5.11}Tree Isomorphism}{17}{subsection.5.11}%
-\contentsline {section}{\numberline {6}Math}{17}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Combi}{17}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Linear Sieve}{17}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Pollard Rho}{18}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Chinese Remainder Theorem}{18}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Mobius Function}{18}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}FFT}{18}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}NTT}{19}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}WalshHadamard}{20}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}Berlekamp Massey}{20}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}Lagrange}{21}{subsection.6.10}%
-\contentsline {subsection}{\numberline {6.11}Shanks' Baby Step, Giant Step}{21}{subsection.6.11}%
-\contentsline {subsection}{\numberline {6.12}Xor Basis}{21}{subsection.6.12}%
-\contentsline {section}{\numberline {7}String}{21}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Aho Corasick}{21}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Double hash}{22}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Manacher's}{22}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Suffix Array}{23}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Z Algo}{23}{subsection.7.5}%
-\contentsline {section}{\numberline {8}Equations and Formulas}{24}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Catalan Numbers}{24}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Stirling Numbers First Kind}{24}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Stirling Numbers Second Kind}{24}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Other Combinatorial Identities}{24}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Different Math Formulas}{24}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}GCD and LCM}{24}{subsection.8.6}%
+\contentsline {subsection}{\numberline {4.3}Polygon}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Convex}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Circular}{11}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Half Plane}{12}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Graph}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Graph Template}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Lifting, LCA, HLD}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}SCC}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Centroid Decompose}{13}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Euler Tour on Edge}{14}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Virtual Tree}{14}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Dinic Max Flow}{14}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Min Cost Max Flow}{15}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Block Cut Tree}{15}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}Bridge Tree}{16}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}Tree Isomorphism}{16}{subsection.5.11}%
+\contentsline {section}{\numberline {6}Math}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Combi}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Linear Sieve}{16}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Pollard Rho}{17}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Chinese Remainder Theorem}{17}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Mobius Function}{17}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}FFT}{17}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}NTT}{18}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}WalshHadamard}{19}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Berlekamp Massey}{19}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Lagrange}{20}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Shanks' Baby Step, Giant Step}{20}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Xor Basis}{20}{subsection.6.12}%
+\contentsline {section}{\numberline {7}String}{20}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Aho Corasick}{20}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Double hash}{21}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Manacher's}{21}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Suffix Array}{21}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Z Algo}{22}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Equations and Formulas}{23}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Catalan Numbers}{23}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Stirling Numbers First Kind}{23}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Stirling Numbers Second Kind}{23}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Other Combinatorial Identities}{23}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Different Math Formulas}{23}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}GCD and LCM}{23}{subsection.8.6}%
