@@ -22,7 +22,7 @@ def convert(filename):
 
 
         leading_tabs = len(new_line) - len(new_line.lstrip('\t'))
-        new_line = '  ' * leading_tabs + new_line.lstrip('\t')
+        new_line = ' ' * leading_tabs + new_line.lstrip('\t')
 
         newlines.append(new_line)
 
@@ -56,22 +56,48 @@ def ProcessDir(dir, name, depth, W):
         else : 
             ProcessDir(pth, subdir, depth + 1, W)
 
+def handle_underscores(name) :
+    ans = '';
+    for x in name:
+        if x == '_': ans += '\\textunderscore '
+        else : ans += x
+    return ans
+
 def get_info():
     print("Enter Team Name")
     team = input()
+    team = handle_underscores(team)
+
     print("Enter Uni Name")
     uni = input()
-    print("Enter Number of Columns")
-    cols = input()
+    uni = handle_underscores(uni)
+
+    print("Enter Number of Columns\n1. 2 Columns\n2. 3 Columns")
+    try:
+        x = int(input())
+        cols = "2" if x == 1 else "3"
+    except:
+        cols = "2"
+
     print("Which Orientation Do You Want?\n1. Portrait\n2. Landscape")
-    x = int(input())
-    ort = "portrait" if x == 1 else "landscape"
-    print("What font size?\n1. 10\n2. 11\n3. 12")
-    x = int(input())
-    fs = '10'
-    if x == 2: fs = '11'
-    if x == 3: fs = '12'
-    return (team, uni,cols, ort, fs)
+    try:
+        x = int(input())
+        ort = "portrait" if x == 1 else "landscape"
+    except:
+        ort = "landscape"
+
+    print("What font size?\n1. 9pt\n2. 10pt \n3. 11pt \n4. 12pt")
+    try:
+        x = int(input())
+
+        if x == 1: fsz = '\\footnotesize'
+        elif x == 2: fsz = '\\small'
+        elif x == 3: fsz = '\\normalsize'
+        else: fsz = '\\large'
+    except:
+        fsz = '\\small'
+
+    return (team, uni, cols, ort, fsz)
     
 def load():
     if os.path.getsize('cache.txt') == 0:

@@ -1,5 +1,5 @@
-IUT Shongshoptok
+IUT\textunderscore Shongshoptok
 Islamic University of Technology
 3
 landscape
-10
+\footnotesize

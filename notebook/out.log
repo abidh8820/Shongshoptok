@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.20)  25 APR 2024 08:18
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.20)  11 MAY 2024 22:16
  restricted system commands enabled.
 **out.tex
 (./out.tex
@@ -10,8 +10,8 @@ Error in luaotfload: reverting to OT1 L3 programming layer <2022-01-21>
 Inserting `tracingstacklevels' at position 1 in `input_level_string'.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
 4.
 
@@ -464,38 +464,34 @@ File: l3backend-luatex.def 2022-01-12 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box100
 )
-
-LaTeX Warning: Unused global option(s):
-    [FSZ,onesided].
-
 (./out.aux)
 \openout1 = out.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-3.
+2.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
 \c@lstlisting=\count302
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -520,7 +516,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -533,9 +529,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 62.
+LaTeX Info: Redefining \pageref on input line 62.
+LaTeX Info: Redefining \nameref on input line 62.
 
 (./out.out) (./out.out)
 \@outlinefile=\write3
@@ -546,7 +542,7 @@ LaTeX Info: Redefining \nameref on input line 63.
 *geometry* detected driver: luatex
 
 Package geometry Warning: The marginal notes overrun the paper.
-     Add 53.77364pt and more to the right margin.
+     Add 45.77364pt and more to the right margin.
 
 *geometry* verbose mode - [ preamble ] result:
 * driver: luatex
@@ -565,12 +561,12 @@ Package geometry Warning: The marginal notes overrun the paper.
 * \topmargin=-70.04361pt
 * \headheight=12.0pt
 * \headsep=14.22636pt
-* \topskip=10.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
 * \columnsep=3.61371pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -818,28 +814,33 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 5.
 
-Missing character: There is no … (U+2026) in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
 Missing character: There is no … (U+2026) in font cmr10!
 Missing character: There is no … (U+2026) in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--43
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 45
- []$[]  [] \OMS/cmsy/m/n/10   [][][]   [][][] \OT1/cmr/m/n/10 + 1  $ 
+Underfull \hbox (badness 10000) detected at line 40
+ []$[]  [] \OMS/cmsy/m/n/10.95   [][][]   [][][] \OT1/cmr/m/n/10.95 + 1  $ 
  []
 
 
-Overfull \hbox (0.30132pt too wide) in paragraph at lines 47--63
-\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ) = [] [] 
-[](\OML/cmm/m/it/10 i; j\OT1/cmr/m/n/10 ) = [] [][] [] \OML/cmm/m/it/10 \OT1/c
-mr/m/n/10 (\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ld$ 
+Overfull \hbox (24.60281pt too wide) in paragraph at lines 42--58
+\OML/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.9
+5 ) = [] [] [](\OML/cmm/m/it/10.95 i; j\OT1/cmr/m/n/10.95 ) = [] [][] [] \OML/c
+mm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 d\OT1/cmr/m/n/10.95 )\OM
+L/cmm/m/it/10.95 ld$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--63
+Underfull \hbox (badness 10000) in paragraph at lines 42--58
 
  []
 
@@ -857,34 +858,34 @@ Package rerunfilecheck Info: File `out.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 18131 strings out of 477805
- 1819371,794899 words of node,token memory allocated
+ 18139 strings out of 477805
+ 1819556,794899 words of node,token memory allocated
  586 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 26 attribute, 59 glue_spec, 26 attr
 ibute_list, 1 write nodes
-   avail lists: 1:2,2:22401,3:1030,4:2494,5:47343,6:322,7:70782,8:307,9:95153,10
-:46,11:5008
- 35222 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:22461,3:1031,4:2568,5:47567,6:322,7:70538,8:307,9:95611,10
+:47,11:5023
+ 35231 multiletter control sequences out of 65536+600000
  35 fonts using 1459567 bytes
- 60i,12n,65p,557b,1279s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,65p,557b,1279s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
 /lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
+onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.
+mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on out.pdf (24 pages, 418150 bytes).
+Output written on out.pdf (24 pages, 418010 bytes).
 
-PDF statistics: 3563 PDF objects out of 3580 (max. 8388607)
- 3487 compressed objects within 35 object streams
- 3017 named destinations out of 3580 (max. 131072)
+PDF statistics: 3562 PDF objects out of 3580 (max. 8388607)
+ 3486 compressed objects within 35 object streams
+ 3016 named destinations out of 3580 (max. 131072)
  529 words of extra memory for PDF output out of 10000 (max. 100000000)
 
