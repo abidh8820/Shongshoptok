@@ -53,7 +53,7 @@ The script will prompt you with several configuration options:
 
 1. **Load Saved Data**
    - Yes: Load previously saved configuration
-   - No: Start with fresh configuration // you should be using this for the first time
+   - No: Start with fresh configuration, if generating for a new team
 
 2. **Team Information**
    - Enter your team name
