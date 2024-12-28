@@ -61,8 +61,8 @@ The script will prompt you with several configuration options:
    
    ⚠️ Important: Use spaces instead of underscores (_) in team and university names
    ```
-   ✅ Correct: "Team Name"
-   ❌ Incorrect: "Team_Name"
+   ✅ Correct: "IUT ShongShoptok"
+   ❌ Incorrect: "IUT_ShongShoptok"
    
    ✅ Correct: "Islamic University of Technology"
    ❌ Incorrect: "Islamic_University_of_Technology"
