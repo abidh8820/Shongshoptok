@@ -32,8 +32,8 @@ sudo apt-get install python3
 
 # Install LaTeX packages
 sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-luatex
-or 
-#if something breaks or you have good bandwith
+
+# Or if something breaks or you have good bandwith
 sudo apt-get install texlive-full
 
 
